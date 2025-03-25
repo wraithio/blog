@@ -24,7 +24,7 @@ namespace blog.Controllers
         {
             bool success = await _userServices.CreateUser(user);
             if(success) return Ok(new {Success = true});
-            return BadRequest(new {Success = false, Message = "username is already exists..."});
+            return BadRequest(new {Success = false, Message = "username already exists..."});
         }
 
         [HttpPost("Login")]
