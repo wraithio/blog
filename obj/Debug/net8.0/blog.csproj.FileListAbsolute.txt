@@ -121,6 +121,7 @@ C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\blog.AssemblyInfo.cs
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\blog.csproj.CoreCompileInputs.cache
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\blog.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\blog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\blog.sourcelink.json
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\aarmo\CodeStack\Level3\Week4\blog\obj\Debug\net8.0\staticwebassets\msbuild.blog.Microsoft.AspNetCore.StaticWebAssets.props

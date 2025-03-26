@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using blog.Models.DTOs;
 using blog.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace blog.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    // [Authorize]
     public class UserController : ControllerBase
     {
         private readonly UserServices _userServices;

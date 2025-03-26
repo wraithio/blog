@@ -68,7 +68,7 @@ namespace blog.Services
 
             if(currentUser == null) return null;
 
-            if(VerifyPassword(user.Password, currentUser.Salt, currentUser.Hash)) return null;
+            if(!VerifyPassword(user.Password, currentUser.Salt, currentUser.Hash)) return null;
 
             return GenerateJWTToken(new List<Claim>());
         }
@@ -80,8 +80,8 @@ namespace blog.Services
             var signingCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
             var tokenOptions = new JwtSecurityToken(
-                issuer: "http://localhost:5000",
-                audience: "http://localhost:5000",
+                issuer: "https://robinsonblog-h6fyg9ghabbbf4a2.westus-01.azurewebsites.net/",
+                audience: "https://robinsonblog-h6fyg9ghabbbf4a2.westus-01.azurewebsites.net/",
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: signingCredentials
@@ -91,7 +91,6 @@ namespace blog.Services
         }
 
         //Task is the syntax for an async function around the return type
-        private async Task<UserModel> GetUserbyUsername(string username) => await _dataContext.Users.SingleOrDefaultAsync(user => user.Username == username);
 
         private static bool VerifyPassword(string password, string salt, string hash)
         {
@@ -104,6 +103,7 @@ namespace blog.Services
                 return hash == checkHash;
             }
         }
+        private async Task<UserModel> GetUserbyUsername(string username) => await _dataContext.Users.SingleOrDefaultAsync(user => user.Username == username);
 
         public async Task<UserInfoDTO> GetUserInfoByUsername(string username)
         {
